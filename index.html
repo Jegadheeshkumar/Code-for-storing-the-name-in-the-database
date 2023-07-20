@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Forms</title>
+		<link rel="stylesheet" type="text/css" href="CSS/style.css" />
+	</head>
+
+	<body>
+		<div class="parent" id="formToGrid">
+			<h2 class="heading"></h2>
+			<div class="sub-parent">
+
+                <!--Request Type-->
+				<div class="child">
+					<label class="label-style">Request Type</label>
+					<select class="dropdown-style" id="request">
+						<option selected value="">Select</option>
+						<option>Leave</option>
+					</select>
+					<div>
+						<span class="error" id="requestError"></span>
+					</div>
+				</div>
+
+                <!--Leave Type-->
+				<div class="child">
+					<label class="label-style">Leave Type<span class="star-color">*</span></label>
+					<select class="dropdown-style" id="leave">
+						<option selected value="">Select</option>
+						<option>Casual</option>
+					</select>
+					<div>
+						<span class="error" id="leaveError"></span>
+					</div>
+				</div>
+
+                <!--From Date-->
+				<div class="child">
+					<label class="label-style" for="dob">From Date<span class="star-color">*</span></label>
+					<input type="date" class="textbox-style" id="fromdate" />
+					<div>
+						<span class="error" id="fromdateError"></span>
+					</div>
+				</div>
+
+                <!--To Date-->
+				<div class="child">
+					<label class="label-style" for="dob">To Date<span class="star-color">*</span></label>
+					<input type="date" class="textbox-style" id="todate" />
+					<div>
+						<span class="error" id="todateError"></span>
+					</div>
+				</div>
+            </div>
+            <!-------------------------------------------Row 1 End--------------------------------------------------------->
+            <div class="sub-parent">
+
+				<!--# Wroking Days-->
+				<div class="child">
+					<label class="label-style" for="WorkingDays"># Working Days<span class="star-color">*</span></label>
+					<input
+						type="number"
+						placeholder=""
+						class="textbox-style"
+						id="WorkingDays"
+					/>
+					<div>
+						<span class="error" id="WorkingDaysError"></span>
+					</div>
+				</div>
+
+				<!--Holidays / Weekends-->
+				<div class="child">
+					<label class="label-style" for="Holidays"># Holidays/ Weekends<span class="star-color">*</span></label>
+					<input
+						type="number"
+						placeholder=""
+						class="textbox-style"
+						id="Holidays"
+					/>
+                    <div>
+						<span class="error" id="HolidaysError"></span>
+					</div>
+				</div>
+
+				<!--Contact Number-->
+				<div class="child">
+					<label class="label-style" for="mobileNumber">Alternate Contact Number<span class="star-color">*</span></label>
+					<input
+						type="number"
+						placeholder="Enter The Number"
+						class="textbox-style"
+						id="mobileNumber"
+					/>
+					<div>
+						<span class="error" id="mobileNumberError"></span>
+					</div>
+                </div>
+
+                <!--Manager-->
+				<div class="child">
+					<label class="label-style" for="manager">Manager<span class="star-color">*</span></label>
+					<input
+						type="text"
+						placeholder=""
+						class="textbox-style"
+						id="manager"
+					/>
+					<div>
+						<span class="error" id="managerError"></span>
+					</div>
+				</div>
+			    
+            </div>
+
+			<!-----------------------------------------------Row 2 End------------------------------------------------------>
+			<div class="sub-parent-1">
+
+                <!--Lead-->
+				<div class="child">
+					<label class="label-style" for="lead">Lead</label>
+					<input
+						type="text"
+						placeholder=""
+						class="textbox-style"
+						id="lead"
+					/>
+					<div>
+						<span class="error" id="leadError"></span>
+					</div>
+				</div>
+
+				<!--Check Box-->
+				<div class="child">
+					<label class="label-style">Availability in case of Emergency<span class="star-color">*</span></label>
+					<input type="checkbox" name="type" class="radio" id="calls" />
+					<label id="male" class="right-space" for="calls">Calls</label>
+                    <input type="checkbox" name="type" class="center" id="email" />
+					<label for="email" class="right-space">Email</label>
+                    <input type="checkbox" name="type" class="center" id="na" />
+					<label for="na">NA</label>
+					
+					<div>
+						<span class="error" id="availableError"></span>
+					</div>
+				</div>
+				
+			</div>
+            <!------------------------------------------------------Row 3 End-------------------------------------------------------->
+			<div class="sub-parent-1">
+
+				<!--Dependant Work-->
+				<div class="child-2">
+					<label class="label-style" for="comments">Dependent Work<span class="star-color">*</span></label>
+					<textarea rows="5" id="DepartmentWork" class="text-area-1" placeholder="Enter the Dependant Work"></textarea>
+
+                    <div>
+						<span class="error" id="DepartmentWorkError"></span>
+					</div>
+				</div>
+
+                <!--Responsible Person-->
+				<div class="child-2">
+					<label class="label-style" for="Responsible">Responsible Person<span class="star-color">*</span></label>
+					<input
+						type="text"
+						placeholder=""
+						class="textbox-style-1"
+						id="Responsible"
+					/>
+					<div>
+						<span class="error" id="ResponsibleError"></span>
+					</div>
+				</div>
+			</div>
+			<!------------------------------------------------------Row 4 End----------------------------------------------------->
+			<div class="sub-parent-1">
+				<h2 class="heading"></h2>
+
+				<!--Address-->
+				<div class="child-1">
+					<label class="label-style" for="ReasonForLeave">Reason for Leave<span class="star-color">*</span></label>
+					<textarea rows="5" id="ReasonForLeave" class="text-area-2" placeholder="Enter the Reason for Leave"></textarea>
+
+                    <div>
+						<span class="error" id="ReasonForLeaveError"></span>
+					</div>
+				</div>
+			</div>
+            <!-------------------------------------------------------Row 5 End----------------------------------------------------->
+            
+			<!--buttons-->
+			<div class="sub-parent-1">
+				<div class="allign-right">
+					<button class="cancel">Cancel</button>
+					<button id="submitbtn" class="submit" onclick="submitForm()">Submit</button>
+				</div>
+			</div>
+		</div>
+        <!-----------------------------------------------------------Form End------------------------------------------------------>
+		<!-- GRID -->
+		<div class="border display-none" id="gridToForm" style="display: none;">
+			<h1 class="heading">Candidate Registration</h1>
+			<div class="button">
+				<button class="addButton" onclick="addCandidate()">ADD</button>
+			</div>
+			<table class="tableParent">
+				<thead class="head-border">
+					<tr class="color">
+						<th class="table">ID</th>
+						<th class="table">REQUEST TYPE</th>
+						<th class="table">LEAVE TYPE</th>
+						<th class="table">FROM DATE</th>
+						<th class="table">TO DATE</th>
+						<th class="table">WORKING DAYS</th>
+						<th class="table">HOLIDAYS / WEEKENDS</th>
+						<th class="table">ALTERNATE CONTACT NUMBER</th>
+						<th class="table">MANAGER</th>
+						<th class="table">LEAD</th>
+						<th class="table">AVAILABILITY IN CASE OF EMERGENCY</th>
+						<th class="table">RESPONSIBLE PERSON</th>
+
+					</tr>
+				</thead>
+				<tbody id="tableBody">
+					<!--  insert id -->
+				</tbody>
+			</table>
+		</div>
+	</body>
+	<script src="js/script.js"></script>
+</html>
